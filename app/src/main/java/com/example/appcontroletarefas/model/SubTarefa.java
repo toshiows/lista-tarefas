@@ -1,6 +1,8 @@
 package com.example.appcontroletarefas.model;
 
-public class SubTarefa {
+import java.io.Serializable;
+
+public class SubTarefa implements Serializable {
 
     private String descricao;
     private int id;

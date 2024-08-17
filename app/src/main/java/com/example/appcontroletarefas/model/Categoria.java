@@ -1,6 +1,8 @@
 package com.example.appcontroletarefas.model;
 
-public class Categoria {
+import java.io.Serializable;
+
+public class Categoria implements Serializable {
 
     private int id;
     private String prioridade;
