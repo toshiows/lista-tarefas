@@ -20,7 +20,7 @@ public class DbHelper extends SQLiteOpenHelper {
     //Criação da Tabela de USUARIO
     private static final String SQL_CREATE_USUARIO =
             "CREATE TABLE IF NOT EXISTS "+ TB_USUARIO + " (" +
-                    "    id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "    id_usuario INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "    nome TEXT NOT NULL," +
                     "    login TEXT NOT NULL UNIQUE," +
                     "    senha TEXT NOT NULL" +
@@ -47,11 +47,11 @@ public class DbHelper extends SQLiteOpenHelper {
     //Criação da Tabela de TAREFA
     private static final String SQL_CREATE_TAREFA =
             "CREATE TABLE IF NOT EXISTS " + TB_TAREFA + " (" +
-                    "    id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "    id_tarefa INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "    titulo TEXT NOT NULL," +
                     "    descricao TEXT NOT NULL," +
-                    "    dataInicio TEXT NOT NULL," +
-                    "    dataFim TEXT NOT NULL," +
+                    "    dataInicio DATETIME NOT NULL," +
+                    "    dataFim DATETIME NOT NULL," +
                     "    subTarefa INTEGER," +
                     "    categoria INTEGER," +
                     "    idUsuario INTEGER NOT NULL," +
