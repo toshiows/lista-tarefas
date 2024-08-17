@@ -2,6 +2,7 @@ package com.example.appcontroletarefas.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class Tarefa implements Serializable {
 
@@ -11,11 +12,11 @@ public class Tarefa implements Serializable {
     private String descricao;
     private Date dataInicio;
     private Date dataFim;
-    private SubTarefa subTarefa;
-    private Categoria categoria;
+    private List<SubTarefa> subTarefa;
+    private List<Categoria> categoria;
     private int idUsuario;
 
-    public Tarefa(int id, String titulo, String descricao, Date dataInicio, Date dataFim, SubTarefa subTarefa, Categoria categoria, int idUsuario) {
+    public Tarefa(int id, String titulo, String descricao, Date dataInicio, Date dataFim, List<SubTarefa> subTarefa, List<Categoria> categoria, int idUsuario) {
         this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
@@ -34,7 +35,7 @@ public class Tarefa implements Serializable {
         this.id = id;
     }
 
-    public static String getTitulo() {
+    public String getTitulo() {
         return titulo;
     }
 
@@ -42,7 +43,7 @@ public class Tarefa implements Serializable {
         this.titulo = titulo;
     }
 
-    public static String getDescricao() {
+    public String getDescricao() {
         return descricao;
     }
 
@@ -66,19 +67,19 @@ public class Tarefa implements Serializable {
         this.dataFim = dataFim;
     }
 
-    public SubTarefa getSubTarefa() {
+    public List<SubTarefa> getSubTarefa() {
         return subTarefa;
     }
 
-    public void setSubTarefa(SubTarefa subTarefa) {
+    public void setSubTarefa(List<SubTarefa> subTarefa) {
         this.subTarefa = subTarefa;
     }
 
-    public Categoria getCategoria() {
+    public List<Categoria> getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(Categoria categoria) {
+    public void setCategoria(List<Categoria> categoria) {
         this.categoria = categoria;
     }
 
