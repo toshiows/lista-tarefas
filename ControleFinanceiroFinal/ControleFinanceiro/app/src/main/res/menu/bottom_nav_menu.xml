@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mnuDespesa"
+        android:title="Despesas" />
+    <item
+        android:id="@+id/mnuReceita"
+        android:title="Receitas" />
+    <item
+        android:id="@+id/mnuConfiguracao"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/mnuDashboard"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/mnuSobre"
+        android:title="Sobre" />
+</menu>
