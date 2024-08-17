@@ -1,8 +1,9 @@
 package com.example.appcontroletarefas.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Tarefa {
+public class Tarefa implements Serializable {
 
     private int id;
     private String titulo;
@@ -33,7 +34,7 @@ public class Tarefa {
         this.id = id;
     }
 
-    public String getTitulo() {
+    public static String getTitulo() {
         return titulo;
     }
 
@@ -41,7 +42,7 @@ public class Tarefa {
         this.titulo = titulo;
     }
 
-    public String getDescricao() {
+    public static String getDescricao() {
         return descricao;
     }
 
