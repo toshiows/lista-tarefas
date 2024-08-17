@@ -1,6 +1,7 @@
 package com.example.appcontroletarefas.persistencia;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
@@ -16,7 +17,11 @@ public class CategoriaDAO implements ICrudDAO<Categoria> {
     private SQLiteDatabase dbEscreve;
     private SQLiteDatabase dbLe;
 
-
+    public CategoriaDAO(Context context) {
+        DbHelper db = new DbHelper(context);
+        dbEscreve = db.getWritableDatabase();
+        dbLe = db.getReadableDatabase();
+    }
     @Override
     public boolean salvar(Categoria categoria) {
         ContentValues cv = new ContentValues();
